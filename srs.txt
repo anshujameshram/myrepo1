@@ -1,0 +1,520 @@
+1.ONline ticket booking system
+
+1. Registration –If a customer wants to book the ticket then he/she must be registered, an unregistered user can’t book the ticket. 
+2. Login –Customer logins to the system by entering valid user id and password for booking the ticket.
+3. Search Movie – The system shall have a search function. Customer or visitor can search movies based on movie name, date, time and venue
+4. Seat Viewing – The customer shall be shown a 2D image of the seats from which the desired seats are selected.
+5.Ticket canceling – The customer shall be given an option to cancel ticket one hour before the movie with some fine.
+6. Payment – For the customer there are many types of secure billing will be prepaid by debit or credit card. The security will provide by the third party like Pay-Pal etc.   
+7. Logout –After the payment or browse the movie, the customer will log out.
+8. Generate ticket – After booking, the system can generate the portable document file (.pdf) and then sent one copy to the customer’s Email-address and 
+another one as an SMS to customer’s phone.
+9. Add movies – The system shall have a feature for admin to add movies and their details.
+10. Remove movies – The system shall have a feature for admin to remove movies.
+
+D. Existing System
+The existing system of an online application has features like booking tickets online, to know the information of the
+movie(cast and crew information). Customer can view the trailer of the movies. Customers get the confirmation of their booking through an email. 
+
+A. Functional Requirements
+A customer should be able to
+ login to the system through the first page of the application change the password after logging into the system.
+ No reservation before one day can be done.
+ See his/her current reservations on different movies along with the details.
+ Able to choose the seats which are available for a certain class.
+ Can select seats from different classes as well for same show and screen also.
+ Give details about the details about the credit card.
+
+A message should be sent to the concerned person about the confirmation of the ticket to the specified mobile number.
+The login Id and password should be sent to the mentioned email address if a new account is created.
+The system should automatically show the fare for the corresponding shows and amount of money needs to be paid for selected seats.
+
+Here are some example relation tables for an online ticket booking system:
+
+Users Table
+This table stores information about the users who use the system, such as their name, email, password, and user ID.
+Field Name	Data Type	Constraints
+user_id	        integer	     primary key
+name	        varchar	        not null
+email	        varchar	        not null
+password	varchar     	not null
+
+Events Table
+This table stores information about the events that users can book tickets for, such as event name, event date, and event location.
+Field Name	Data Type	Constraints
+event_id	integer  	primary key
+name		varchar		not null
+date		date		not null
+location	varchar		not null
+
+Tickets Table
+This table stores information about the tickets that users have booked for an event, such as the ticket ID, the user ID, the event ID, and the number of tickets booked.
+Field Name	Data Type	Constraints
+ticket_id	integer		primary key
+user_id		integer		foreign key
+event_id	integer		foreign key
+quantity	integer		not null
+
+Payments Table
+This table stores information about the payments made by users for their booked tickets, such as payment ID, payment date, payment status, and payment amount.
+Field Name	Data Type	Constraints
+payment_id	integer		primary key
+ticket_id	integer		foreign key
+date		date		not null
+status		varchar		not null
+amount		decimal		not null
+
+These are just examples of tables that might be used in an online ticket booking system, and there may be additional tables or fields depending on the 
+specific requirements of the system.
+
+A business entity is a legal entity that is formed to engage in business activities, such as selling goods or services. In the context of an online ticket booking system, 
+the business entity could be a company or organization that provides the online ticket booking platform for customers to purchase tickets for various events.
+
+Some possible business entities involved in an online ticket booking system include:
+
+Ticketing Company: This is the main business entity that owns and operates the online ticket booking platform. They may have partnerships with event organizers to sell tickets
+ for various events.
+
+Event Organizer: This is the entity that hosts the event and is responsible for providing the tickets to the ticketing company. They may also work with the ticketing company 
+to set pricing and other details related to the event.
+
+Payment Processor: This is the entity that handles the payment transactions between the customers and the ticketing company. They may take a percentage of each transaction as a 
+processing fee.
+
+Venue Owner: This is the entity that owns the physical location where the event is taking place. They may have a contract with the event organizer and the ticketing company to 
+host the event and sell tickets through the online platform.
+
+Customer: This is the entity that purchases tickets through the online ticket booking platform. They may have access to different events and ticket options, and may also provide 
+feedback and reviews on the ticketing experience.
+
+These are just some examples of the business entities that could be involved in an online ticket booking system, and there may be additional entities depending on the specific 
+system and industry.
+
+2.Online project management system
+
+Functional Requirements of Final Year Project Management System
+Profiles
+Profile module enables supervisors to create profiles that will aid students in supervisor selection. Students can see the profile of supervisors and can send requests to them.
+ Supervisors can respond to students’ requests according to their available slots.
+
+Feedback
+Feedback modules enable supervisors to give feedback to students on their evaluated project module. This feature not only saves the time of students and supervisors but also helps 
+students to align their performance if they are lacking.
+
+Notifications
+This module has real-time push notification features. Supervisors can use these features for sending meeting schedules to students in real-time. Students can receive the meeting 
+schedule at the same time it was generated. These features can help students to attend meetings right on time also students can get updates directly from supervisors.
+
+Chat
+This feature enables the communication between students. Students can communicate with their group members. They can do a discussion about projects by using this module.
+
+Software Requirements Specification (SRS) documents are essential for defining the scope and functionality of software projects. Here is an example of an SRS document for an online
+ project management system:
+
+Introduction
+The online project management system is a web-based application designed to help project managers and teams manage projects more efficiently. The system will provide features for 
+creating and managing projects, assigning tasks to team members, tracking progress, and generating reports.
+
+User Requirements
+The system will have the following user types:
+
+Project Manager: A user who creates and manages projects, assigns tasks, and tracks progress.
+Team Member: A user who is assigned tasks and updates progress.
+2.1 Functional Requirements
+The system will have the following features:
+
+Project creation: A project manager can create a new project and set its name, description, start date, and end date.
+Task assignment: A project manager can assign tasks to team members and set their deadlines.
+Task tracking: Team members can update the progress of their assigned tasks, and project managers can view the progress of all tasks.
+Communication: The system will provide a messaging system for project managers and team members to communicate about the project.
+Reporting: The system will generate reports that show project progress, task completion, and other relevant metrics.
+
+2.2 Non-Functional Requirements
+
+Performance: The system should be able to handle a large number of users and projects without significant delays.
+Security: The system should have secure login and authentication features to protect user data.
+Availability: The system should be available 24/7, with minimum downtime for maintenance.
+System Requirements
+The system will be developed using the following technologies:
+Front-end: HTML, CSS, JavaScript, ReactJS
+Back-end: Node.js, Express.js, MongoDB
+Hosting: Amazon Web Services (AWS)
+Constraints
+The system should be compatible with modern web browsers such as Google Chrome, Mozilla Firefox, and Microsoft Edge.
+The system should follow accessibility guidelines to ensure that it is usable by people with disabilities.
+Assumptions
+Users will have a reliable internet connection to access the system.
+Users will have basic computer skills to use the system.
+The system will be used by small to medium-sized project teams.
+Dependencies
+The system will depend on third-party libraries and frameworks, such as ReactJS and Express.js.
+The system will use Amazon Web Services for hosting, which will depend on the availability and reliability of AWS.
+Acceptance Criteria
+The system will be considered acceptable if it meets the following criteria:
+The system should be easy to use and intuitive for both project managers and team members.
+The system should be reliable and stable, with minimal downtime for maintenance.
+The system should provide accurate and up-to-date information about project progress and task completion.
+The system should be secure and protect user data from unauthorized access.
+Glossary
+Project Manager: A user who creates and manages projects, assigns tasks, and tracks progress.
+Team Member: A user who is assigned tasks and updates progress.
+Task: A specific activity that needs to be completed as part of a project.
+Progress: The percentage of completion for a task or project.
+
+
+Here are some example relation tables for an online project management system:
+
+Users Table
+This table stores information about the users who use the system, such as their name, email, password, and user ID.
+Field Name	Data Type	Constraints
+user_id	integer	primary key
+name	varchar	not null
+email	varchar	not null
+password	varchar	not null
+Projects Table
+This table stores information about the projects in the system, such as project name, project description, and project status.
+Field Name	Data Type	Constraints
+project_id	integer	primary key
+name	varchar	not null
+description	text	
+status	varchar	not null
+Tasks Table
+This table stores information about the tasks for each project, such as task name, task description, task status, and the user assigned to the task.
+Field Name	Data Type	Constraints
+task_id	integer	primary key
+project_id	integer	foreign key
+name	varchar	not null
+description	text	
+status	varchar	not null
+assigned_to	integer	foreign key
+Comments Table
+This table stores information about the comments on tasks, such as comment ID, task ID, user ID, and the comment text.
+Field Name	Data Type	Constraints
+comment_id	integer	primary key
+task_id	integer	foreign key
+user_id	integer	foreign key
+comment	text	not null
+created_at	datetime	not null
+User_Projects Table
+This table stores the association between users and projects they are involved in, such as user ID and project ID.
+Field Name	Data Type	Constraints
+user_id	integer	foreign key
+project_id	integer	foreign key
+These are just examples of tables that might be used in an online project management system, and there may be additional tables or fields depending on the 
+specific requirements of the system.
+
+In the context of an online project management system, the business entity could be a company or organization that provides the online platform for managing and collaborating
+ on projects. Here are some possible business entities involved in an online project management system:
+
+Project Management Software Company: This is the main business entity that owns and operates the online project management platform. They may offer a suite of tools for managing
+ projects, such as task management, team collaboration, and reporting.
+
+Project Managers: These are the individuals responsible for planning, executing, and closing projects using the online project management system. They may use the platform to create 
+and assign tasks, track progress, and communicate with team members.
+
+Team Members: These are the individuals who are assigned tasks and work on projects using the online project management system. They may use the platform to view their tasks, provide 
+updates, and communicate with other team members.
+
+Clients: These are the individuals or organizations for whom the projects are being completed. They may have access to the online project management system to view project progress, 
+provide feedback, and communicate with the project team.
+
+Integrations: These are other software tools that may integrate with the online project management system to provide additional functionality. For example, a time tracking tool may 
+integrate with the project management system to automatically track the time spent on each task.
+
+Administrators: These are the individuals who manage the user accounts and settings for the online project management system. They may configure access permissions, manage integrations,
+ and generate reports.
+
+These are just some examples of the business entities that could be involved in an online project management system, and there may be additional entities depending on the specific system
+ and industry.
+
+3.online employee recritment system 
+
+.
+Online Employee Recruitment System
+Abstract:
+Project Details: 
+ The project entitled “Online Recruitment System” is assignedby the organization.The aim is to provide services to both the Employer and theGraduate by recruiting Graduates
+ according to the employerspecifications. The main flow of the project goes as follows.
+
+ The three main users involved in this system are1.Graduate2.Employer3.Administrator
+
+Graduate is the one who is looking for a job in the sameorganization who can be either a fresher or an experienced.
+
+Employer is a resource of the organization who specifies therequirements. From each department only one authorizedperson acts as an employer.
+
+Administrator is also a resource of the organization from HRdepartment. He/she acts as a mediator between the employerand the graduate.
+
+Graduate gives the complete details about his/her Personal,Educational and Skills which can be updated accordingly untila valid period of three months.
+
+Whenever there is a vacancy, the employer comes into playby specifying the requirements which are viewed by theregistered graduate.
+
+Administrator is responsible to intimate the eligible studentsfor that particular post through e-mail and also updates theemployee database according to the instructions given by 
+theemployer after the complete process of interview.
+
+ 
+Existing System:
+ 
+ The company recruits graduates by maintaining manual recordswhich involves many loop holes.
+Drawbacks:
+1. Redundancy:
+Manual records tend to contain data which are redundant. This isbecause Normalization followed is consistent data base is missingfeature in manual records.
+2. Inconsistency:
+Because of redundant data, there is no consistency in the data.
+3. Time Consuming:
+Maintaining each students and employees data with muchnumber of fields is a tedious process and takes more time to retrieveback.
+4. Improper Validation:
+There are many cases where validation is to be performedbetween the existing data and yet to be entered data. Also, a graduatewho appears for the interview and fails to succeed should 
+not bereconsidered until a period of 3 months.
+5. Tedious:
+An organization data base goes through many numbers of updates each day which is hard to maintain in registers.
+6. More HR:
+In order to maintain the information of all the employees andstudents who applied for different jobs a special group of employeesshould be hired, which ultimately tends to the waste of 
+resources
+
+
+Here is an example of a Software Requirements Specification (SRS) document for an employee recruitment system:
+
+Introduction
+The employee recruitment system is a web-based application designed to streamline the process of hiring new employees. The system will provide features for creating and managing 
+job postings, receiving and reviewing job applications, and scheduling interviews.
+
+User Requirements
+The system will have the following user types:
+
+Administrator: A user who manages the system and has full access to all features.
+Recruiter: A user who creates and manages job postings, receives and reviews job applications, and schedules interviews.
+Applicant: A user who applies for a job posting.
+2.1 Functional Requirements
+The system will have the following features:
+
+Job posting creation: A recruiter can create a new job posting and set its title, description, requirements, salary range, and application deadline.
+Job application submission: Applicants can submit their applications for job postings through the system, including their resumes, cover letters, and any other required documents.
+Application review: Recruiters can review job applications and rate them based on criteria such as qualifications, experience, and skills.
+Interview scheduling: Recruiters can schedule interviews with applicants and send them notifications through the system.
+Hiring decision: Recruiters can make hiring decisions based on the results of the application review and interviews.
+2.2 Non-Functional Requirements
+
+Performance: The system should be able to handle a large number of job postings and job applications without significant delays.
+Security: The system should have secure login and authentication features to protect user data.
+Availability: The system should be available 24/7, with minimum downtime for maintenance.
+System Requirements
+The system will be developed using the following technologies:
+Front-end: HTML, CSS, JavaScript, ReactJS
+Back-end: Node.js, Express.js, MongoDB
+Hosting: Amazon Web Services (AWS)
+Constraints
+The system should be compatible with modern web browsers such as Google Chrome, Mozilla Firefox, and Microsoft Edge.
+The system should follow accessibility guidelines to ensure that it is usable by people with disabilities.
+The system should comply with local laws and regulations regarding hiring practices and data protection.
+Assumptions
+Users will have a reliable internet connection to access the system.
+Users will have basic computer skills to use the system.
+The system will be used by small to medium-sized organizations.
+Dependencies
+The system will depend on third-party libraries and frameworks, such as ReactJS and Express.js.
+The system will use Amazon Web Services for hosting, which will depend on the availability and reliability of AWS.
+Acceptance Criteria
+The system will be considered acceptable if it meets the following criteria:
+The system should be easy to use and intuitive for both recruiters and applicants.
+The system should be reliable and stable, with minimal downtime for maintenance.
+The system should provide accurate and up-to-date information about job postings, applications, and hiring decisions.
+The system should be secure and protect user data from unauthorized access.
+Glossary
+Administrator: A user who manages the system and has full access to all features.
+Recruiter: A user who creates and manages job postings, receives and reviews job applications, and schedules interviews.
+Applicant: A user who applies for a job posting.
+Job posting: An advertisement for an open position in an organization.
+Application: A document submitted by an applicant for a job posting, including a resume, cover letter, and any other required documents.
+Interview: A meeting between a recruiter and an applicant to discuss the applicant's qualifications and suitability for a job.
+
+Here are some example relation tables for an online employee recruitment system:
+
+Candidates Table
+This table stores information about the job candidates who have applied to the organization, such as their name, email, phone number, and candidate ID.
+Field Name	Data Type	Constraints
+candidate_id	integer	primary key
+name	varchar	not null
+email	varchar	not null
+phone_number	varchar	
+Job Openings Table
+This table stores information about the job openings in the organization, such as job title, job description, and job opening status.
+Field Name	Data Type	Constraints
+job_opening_id	integer	primary key
+title	varchar	not null
+description	text	
+status	varchar	not null
+Applications Table
+This table stores information about the job applications submitted by candidates, such as application ID, candidate ID, job opening ID, and application status.
+Field Name	Data Type	Constraints
+application_id	integer	primary key
+candidate_id	integer	foreign key
+job_opening_id	integer	foreign key
+status	varchar	not null
+Interview Schedule Table
+This table stores information about the interview schedules for job applicants, such as interview schedule ID, candidate ID, job opening ID, interview date, and interview status.
+Field Name	Data Type	Constraints
+interview_schedule_id	integer	primary key
+candidate_id	integer	foreign key
+job_opening_id	integer	foreign key
+interview_date	datetime	not null
+status	varchar	not null
+Interview Feedback Table
+This table stores information about the interview feedback provided by the interviewer, such as interview feedback ID, interview schedule ID, feedback text, and feedback status.
+Field Name	Data Type	Constraints
+interview_feedback_id	integer	primary key
+interview_schedule_id	integer	foreign key
+feedback	text	
+status	varchar	not null
+These are just examples of tables that might be used in an online employee recruitment system, and there may be additional tables or fields depending on the specific 
+requirements of the system.
+
+An online employee recruitment system can be a great business entity to pursue. Here are some key considerations:
+
+Identify your target market: Determine which industries or types of companies you want to serve. Will you specialize in recruiting for a particular sector 
+(e.g., healthcare, tech, finance) or cater to businesses of all types and sizes?
+
+Determine your business model: Will you charge a fee for posting job openings or for finding and hiring qualified candidates? Or will you earn a commission on each successful hire? 
+You could also offer a subscription-based model or a combination of these options.
+
+Build your platform: Develop a user-friendly website or mobile app that allows employers to post job openings, manage applications, and communicate with candidates. 
+You'll also need a database to store candidate resumes and profiles.
+
+Build your network: Start building relationships with potential clients and candidates. Join industry groups and attend events to network with professionals in your target market. 
+Establish yourself as an expert in the recruitment industry by writing blog posts, speaking at events, or offering advice on social media.
+
+Establish your brand: Create a strong brand identity that sets you apart from competitors. Develop a logo, tagline, and marketing materials that reflect your values and mission. 
+Use social media and online advertising to reach your target market and build your brand.
+
+Provide excellent customer service: Ensure that your clients and candidates receive timely and helpful support throughout the recruitment process. Respond promptly to inquiries and 
+provide regular updates on job openings and candidate progress.
+
+Stay current: Keep up-to-date with the latest trends and best practices in recruitment and technology. Continuously improve your platform and service offerings to remain competitive 
+in the marketplace.
+
+Overall, an online employee recruitment system can be a profitable and rewarding business entity if you're willing to put in the time and effort to build a strong brand and 
+provide exceptional customer service.
+
+4.krushi seva kendra system-
+
+Here is an example of a Software Requirements Specification (SRS) document for a Krushi Seva Kendra system:
+
+Introduction
+Krushi Seva Kendra is a web-based application designed to facilitate communication between farmers and agricultural experts. The system will provide features for farmers to register 
+for consultations and for experts to provide recommendations and solutions to farming-related issues.
+
+User Requirements
+The system will have the following user types:
+
+Farmer: A user who registers for consultations and provides details about their farming practices and issues.
+Agricultural Expert: A user who provides recommendations and solutions to farming-related issues.
+2.1 Functional Requirements
+The system will have the following features:
+
+Farmer registration: A farmer can register for consultations by providing their personal details, farming practices, and issues.
+Expert registration: An agricultural expert can register to provide recommendations and solutions to farmers.
+Consultation request: A farmer can request a consultation with an agricultural expert for specific farming issues.
+Consultation scheduling: The system will provide features for scheduling consultations between farmers and agricultural experts.
+Consultation review: After the consultation, the farmer can review the expert's recommendations and solutions.
+Knowledge base: The system will provide a knowledge base with articles and resources on farming practices, issues, and solutions.
+2.2 Non-Functional Requirements
+
+Performance: The system should be able to handle a large number of consultations and users without significant delays.
+Security: The system should have secure login and authentication features to protect user data.
+Availability: The system should be available 24/7, with minimum downtime for maintenance.
+Usability: The system should be easy to use and intuitive for both farmers and agricultural experts.
+System Requirements
+The system will be developed using the following technologies:
+Front-end: HTML, CSS, JavaScript, ReactJS
+Back-end: Node.js, Express.js, MongoDB
+Hosting: Amazon Web Services (AWS)
+Constraints
+The system should be compatible with modern web browsers such as Google Chrome, Mozilla Firefox, and Microsoft Edge.
+The system should follow accessibility guidelines to ensure that it is usable by people with disabilities.
+The system should comply with local laws and regulations regarding agricultural practices and data protection.
+Assumptions
+Users will have a reliable internet connection to access the system.
+Users will have basic computer skills to use the system.
+The system will be used by small to medium-sized farms.
+Dependencies
+The system will depend on third-party libraries and frameworks, such as ReactJS and Express.js.
+The system will use Amazon Web Services for hosting, which will depend on the availability and reliability of AWS.
+Acceptance Criteria
+The system will be considered acceptable if it meets the following criteria:
+The system should be easy to use and intuitive for both farmers and agricultural experts.
+The system should be reliable and stable, with minimal downtime for maintenance.
+The system should provide accurate and up-to-date information about farming practices, issues, and solutions.
+The system should be secure and protect user data from unauthorized access.
+Glossary
+Farmer: A user who registers for consultations and provides details about their farming practices and issues.
+Agricultural Expert: A user who provides recommendations and solutions to farming-related issues.
+Consultation: A meeting between a farmer and an agricultural expert to discuss farming issues and solutions.
+
+Here are some example relation tables for a Krushi Seva Kendra System:
+
+Farmers Table
+This table stores information about the farmers who are registered in the system, such as their name, address, phone number, and farmer ID.
+Field Name	Data Type	Constraints
+farmer_id	integer	primary key
+name	varchar	not null
+address	varchar	not null
+phone	varchar	not null
+Crops Table
+This table stores information about the crops that are available in the system, such as crop name, crop description, and crop ID.
+Field Name	Data Type	Constraints
+crop_id	integer	primary key
+name	varchar	not null
+description	text	
+Orders Table
+This table stores information about the orders placed by the farmers, such as order ID, farmer ID, crop ID, and order quantity.
+Field Name	Data Type	Constraints
+order_id	integer	primary key
+farmer_id	integer	foreign key
+crop_id	integer	foreign key
+quantity	integer	not null
+Payments Table
+This table stores information about the payments made by the farmers, such as payment ID, order ID, payment amount, and payment date.
+Field Name	Data Type	Constraints
+payment_id	integer	primary key
+order_id	integer	foreign key
+amount	decimal	not null
+payment_date	datetime	not null
+Inventory Table
+This table stores information about the inventory of crops available, such as crop ID, quantity, and price per unit.
+Field Name	Data Type	Constraints
+crop_id	integer	primary key
+quantity	integer	not null
+price	decimal	not null
+These are just examples of tables that might be used in a Krushi Seva Kendra System, and there may be additional tables or fields depending on the specific requirements of the system.
+
+Krushi Seva Kendra is a concept that refers to agriculture service centers that provide a range of services to farmers, including access to information on crop cultivation, soil testing,
+ seed and fertilizer distribution, and technical support. If you are interested in building a business entity around this concept, here are some key considerations:
+
+Identify your target market: Determine which geographic regions and types of farmers you want to serve. Will you specialize in serving small-scale or large-scale farmers? Will you focus
+ on a particular crop or agricultural sector?
+
+Determine your business model: Will you provide services for free or charge a fee for specific services? You could also earn commissions by selling seeds, fertilizers, or other 
+agricultural products.
+
+Build your network: Establish relationships with local farmers, agricultural organizations, and government agencies. Attend local events and trade shows to network with potential 
+clients and partners.
+
+Develop your services: Develop a range of services that meet the needs of your target market. This could include soil testing, crop consultancy, seed and fertilizer distribution,
+ and technical support.
+
+Build your infrastructure: Establish a physical location for your Krushi Seva Kendra, including a storefront, storage facility, and office space. You will also need to invest in equipment 
+and technology to provide your services, such as soil testing kits, computer systems, and communication tools.
+
+Hire staff: Hire staff with expertise in agriculture, including agronomists, crop consultants, and sales representatives. Train your staff on the services you provide and the technology
+ you use.
+
+Market your services: Develop a marketing strategy to reach your target market. This could include advertising in local newspapers, radio, or online media, attending trade shows and
+ fairs, and building relationships with local agricultural organizations.
+
+Overall, a Krushi Seva Kendra system can be a profitable and impactful business entity if you are passionate about agriculture and willing to invest in building relationships with 
+farmers and other stakeholders in the industry.
+
+
+
+
+
+
