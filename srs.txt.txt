@@ -1,0 +1,26 @@
+Introduction-
+Online project management system is a tool to help in managing projects within an organization.
+This system help in employees,project managers ,delivery managers and stakeholders to update about executions of projects going on in the organization.
+Scope-
+This project is useful for student with help of supervisors to create different types of projects. 
+
+Functional Requirements-
+a.Profiles
+Profile module enables supervisors to create profiles that will aid students in supervisor selection. Students can see the profile of supervisors and can send requests to them. Supervisors can respond to students’ requests according to their available slots.
+b.Feedback
+Feedback modules enable supervisors to give feedback to students on their evaluated project module. This feature not only saves the time of students and supervisors but also helps students to align their performance if they are lacking.
+c.Notifications
+This module has real-time push notification features. Supervisors can use these features for sending meeting schedules to students in real-time. Students can receive the meeting schedule at the same time it was generated. These features can help students to attend meetings right on time also students can get updates directly from supervisors.
+d.Chat
+This feature enables the communication between students. Students can communicate with their group members. They can do a discussion about projects by using this module.
+e.Project creation: A project manager can create a new project and set its name, description, start date, and end date.
+f.Task assignment: A project manager can assign tasks to team members and set their deadlines.
+g.Task tracking: Team members can update the progress of their assigned tasks, and project managers can view the progress of all tasks.
+h.Communication: The system will provide a messaging system for project managers and team members to communicate about the project.
+i.Reporting: The system will generate reports that show project progress, task completion, and other relevant metrics.
+
+Non-functional Requirements-
+a.	Security- Security must be provided to users through authentication. No other user should access the account of others. 
+b.	Availability- Website must be available 24X7 to users. So that they can access to website anytime and anywhere.
+c.	Portability-  The languages which we used for building dynamic and static combination website we used HTML,CSS ,Javascript .
+d.	Durability- it must available for duration of any user comfortable mode.  
